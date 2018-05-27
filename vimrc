@@ -1,5 +1,13 @@
+" 更换leadkey 为";"
 let mapleader=";"
-syntax on " 语法高亮
+
+" 语法高亮
+syntax on 
+
+"
+" 以下是vundle配置
+"
+"
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -43,5 +51,10 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+"
+"
+" vundle配置结束
+"
+"
 
 set number
