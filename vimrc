@@ -71,3 +71,6 @@ filetype plugin indent on    " required
 "
 
 set number
+set tabstop=4
+set noexpandtab
+set shiftwidth=4
