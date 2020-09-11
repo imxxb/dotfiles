@@ -1,0 +1,6 @@
+[submodule "dot-doom"]
+	path = dot-doom
+	url = git@github.com:imxxb/dot-doom.git
+[submodule "dot-emacs-d"]
+	path = dot-emacs-d
+	url = git@github.com:imxxb/dot-emacs-d.git
