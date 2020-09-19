@@ -1,3 +1,6 @@
+
+
+
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
@@ -16,6 +19,7 @@ call plug#begin('~/.vim/plugged')
 " Multiple Plug commands can be written in a single line using | separators
 " Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'vimwiki/vimwiki'
+" Plug 'dhruvasagar/vim-table-mode'
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
@@ -37,8 +41,30 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "
 call plug#end()
 
+noremap <LEADER>R :source $MYVIMRC <CR>
+
 set nocompatible
 filetype plugin on
 syntax on
 
-map R :source $MYVIMRC <CR>
+set number
+set relativenumber
+set cursorline
+
+" 自动换行
+set wrap
+
+" 在右下角显示正在输入的命令
+set showcmd
+
+" 类似 zsh 选择式补全
+set wildmenu
+
+set hlsearch
+" 打开新文件取消上一次检索
+exec "nohlsearch"
+set incsearch
+" 忽略大小写
+set ignorecase
+" 智能分辨搜索大小写
+set smartcase
