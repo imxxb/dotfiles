@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vimwiki/vimwiki'
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'vim-airline/vim-airline'
 " Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Using a non-default branch
@@ -39,3 +40,5 @@ call plug#end()
 set nocompatible
 filetype plugin on
 syntax on
+
+map R :source $MYVIMRC <CR>
