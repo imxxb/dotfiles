@@ -1,4 +1,6 @@
-
+set nocompatible
+filetype plugin on
+syntax on
 
 
 " Specify a directory for plugins
@@ -19,7 +21,8 @@ call plug#begin('~/.vim/plugged')
 " Multiple Plug commands can be written in a single line using | separators
 " Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'vimwiki/vimwiki'
-" Plug 'dhruvasagar/vim-table-mode'
+" Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'dhruvasagar/vim-table-mode'
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
@@ -41,15 +44,25 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "
 call plug#end()
 
-noremap <LEADER>R :source $MYVIMRC <CR>
+let mapleader=" "
 
-set nocompatible
-filetype plugin on
-syntax on
+noremap <LEADER>r :source $MYVIMRC <CR>
+noremap <LEADER>ff :FZF <CR>
+noremap <LEADER>fp :e $MYVIMRC <CR>
+noremap <LEADER>pp :NERDTreeToggle <CR>
 
 set number
 set relativenumber
 set cursorline
+
+" 设置缩进和 tab
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+
+" 设置上下滚屏留白
+set scrolloff=4
 
 " 自动换行
 set wrap
@@ -68,3 +81,4 @@ set incsearch
 set ignorecase
 " 智能分辨搜索大小写
 set smartcase
+noremap <LEADER>sq :nohlsearch <CR>
