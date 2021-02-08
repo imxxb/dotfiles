@@ -27,6 +27,7 @@ Plug 'dhruvasagar/vim-table-mode'
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
+" Plug 'spolu/dwm.vim'
 " Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Using a non-default branch
@@ -39,7 +40,9 @@ Plug 'vim-airline/vim-airline'
 " Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
 "
@@ -47,10 +50,13 @@ call plug#end()
 
 let mapleader=" "
 
-noremap <LEADER>r :source $MYVIMRC <CR>
-noremap <LEADER>ff :FZF <CR>
-noremap <LEADER>fp :e $MYVIMRC <CR>
-noremap <LEADER>pp :NERDTreeToggle <CR>
+" noremap <LEADER>r :source $MYVIMRC <CR>
+" noremap <LEADER>ff :FZF <CR>
+" noremap <LEADER>fp :e $MYVIMRC <CR>
+" noremap <LEADER>pp :NERDTreeToggle <CR>
+nmap <C-p> :Files<CR>
+nmap <C-e> :Buffers<CR>
+let g:fzf_action = { 'ctrl-e': 'edit' }
 
 set number
 set relativenumber
